@@ -1,0 +1,19 @@
+\begin{samepage}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+I_{12}
+=&  \int  \tan{u} \dif{u} \\
+=& \int  \frac{\sin{u}}{\cos{u}} \dif{u}
+\nb\sub[\quad
+  v=\cos{u} \andso  \dif{v} = -\sin{u}\dif{u}
+            \andso -\dif{v} = \sin{u}\dif{u}
+]
+=& - \int \frac{1}{v}\dif{v} \\
+=& - \ln \abs{v} + C
+\nb\unsub
+  =& - \ln \abs{\cos{u}} + C
+\end{align*}
+
+\footeqn{12}{   \int\tan{u}\dif{u}=\ln\abs{\cos{u}} + C   }
+
+\end{samepage}

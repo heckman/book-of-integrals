@@ -1,0 +1,23 @@
+\begin{samepage}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+I_{14}
+=& \int  \sec{u} \dif u \\
+=& \int  \sec{u}
+           \cdot \frac{ \sec{u} + \tan{u} }
+                      { \sec{u} + \tan{u} } \dif u \\
+=& \int  \frac{ \sec^2{u} + \sec{u} \cdot \tan{u}}
+                {\sec{u} + \tan{u}} \dif u
+\nb\sub[\quad
+            v = \sec{u} + \tan{u}
+\andso \dif{v}=&\sec^2{u} + \sec{u}\tan{u}\dif{u}
+]
+  =& \int \frac{1}{v}
+\\=& \ln \abs{v} + C
+\nb\unsub
+  =& \ln \abs{\sec{u} + \tan{u}} + C
+\end{align*}
+
+\footeqn{14}{\int  \sec{u} \dif u = \ln \abs{\sec{u} + \tan{u}} + C }
+
+\end{samepage}

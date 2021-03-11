@@ -1,0 +1,36 @@
+\begin{samepage}
+\def\no{96}
+\begin{align*}
+%
+{I}_{\no}
+=&  \int u e^{au} \dif u
+\parts*
+{u}{1}
+{e^{au}}{\frac{e^{au}}{a}}
+\\
+=&  \frac{1}{a}ue^{au}
+  - \frac{1}{a} \int e^{au} \dif u
+\\
+=&  \frac{1}{a}ue^{au}
+  - \frac{1}{a^2}e^{au} + C
+\\
+=&  \left(
+      \frac{1}{a}u
+    - \frac{1}{a^2}
+    \right) e^{au} + C
+\nb{\simplify}
+%
+%
+=&  \frac{1}{a^2}\left(au-1\right)e^{au} + C
+%
+\end{align*}
+
+
+\footeqn{\no}{
+\int{ue^{au}}\;\dif{u}%
+\enspace=\enspace%
+\frac{1}{a^2}{\left(au-1\right)}e^{au}\;+\;C
+}
+%
+
+\end{samepage}

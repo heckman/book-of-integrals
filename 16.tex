@@ -1,0 +1,36 @@
+\begin{samepage}
+\def\no{16}
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int
+      \frac{1}{\sqrt{a^2-u^2}}
+    \dif u
+\nb{\sub\sohcahtoa{u}{\sqrt{a^2-u^2}}{a}\\}[
+  \text{and so}\quad u=a\sin\theta
+  \andso \dif{u}=&a\cos\theta\dif\theta \\[1em]
+  \text{and}\quad \sqrt{a^2-u^2}=&a\cos\theta
+]
+=&  \int
+      \frac{a\cos\theta}{a\cos\theta}
+    \dif\theta \\
+=&  \int 1 \dif\theta \\
+=&  \theta + C
+\nb{\unsub*[u]}[\enspace
+  \sin\theta=\frac{u}{a}
+  \andso*\theta=\arcsin{\frac{u}{a}}
+]
+=&  \arcsin{\frac{u}{a}} + C
+\end{align*}
+
+
+\footeqn{\no}{
+\int{\frac{1}{\sqrt{a^2-u^2}}}\;\dif{u}
+\enspace=\enspace%
+\arcsin{\frac{u}{a}}\;+\;C
+}
+%
+
+\end{samepage}

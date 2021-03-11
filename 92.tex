@@ -1,0 +1,31 @@
+\begin{samepage}
+\def\no{92}
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int  {u}\arctan{u} \dif u
+\parts
+  {u}          {\tfrac{1}{2}{u}^2}%
+  {\arctan{u}} {\frac{1}{1+u^2}} \\
+=&  \frac{u^2}{2}\arctan{u}
+  - \frac{1}{2}\int{\frac{u^2+1-1}{1+u^2}} \dif u \\
+=&  \frac{u^2}{2}\arctan{u}
+  - \frac{1}{2}\int{1-\frac{1}{1+u^2}} \dif u \\
+=&  \frac{u^2}{2}\arctan{u}
+  - \frac{1}{2}\left( u - \arctan{u} \right) + C \\
+=&  \frac{u^2+1}{2}\arctan{u}
+  - \frac{u}{2} + C \\
+\end{align*}
+
+
+\footeqn{\no}{
+\int{u\,\arctan{u}}\;\dif{u}
+\enspace=\enspace%
+\frac{u^2+1}{2}\,\arctan{u}
+\;-\;\frac{u}{2}\;+\;C
+}
+%
+
+\end{samepage}

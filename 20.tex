@@ -1,0 +1,36 @@
+\begin{samepage}
+\def\no{20}
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int{ \frac{ 1 }{ u^2-a^2 } }\dif{u} \\
+=&  \int{ \frac{ A }{ u-a } + \frac{ B }{ u+a } }\dif{u}
+\nb{\sub*{}}[\quad
+  A(u+a)+B(u-a) = 1
+  \andso A+B=0 \quad\text{and}\quad A-B=\tfrac{1}{a} \\
+  \andso B=-A
+  \andso 2A=\tfrac{1}{a}
+  \andso A=\tfrac{1}{2a}
+  \andso B=-\tfrac{1}{2a}
+]
+=&  \int{ \frac{ \frac{1}{2a} }{ u-a }
+        + \frac{ -\frac{1}{2a} }{ u+a } }\dif{u} \\
+=&  \frac{1}{2a} \cdot \int{
+       \frac{ 1 }{ u-a } - \frac{ 1 }{ u+a } }\dif{u} \\
+=&  \frac{1}{2a} \left(
+      \ln\abs{ u-a } - \ln\abs{ u+a } + C
+    \right) \\
+=&  \frac{1}{2a} \cdot { \ln\abs{ \frac{u-a}{ u+a } } }+C
+\end{align*}
+
+
+\footeqn{\no}{
+%
+\int{\frac{ 1 }{ u^2-a^2 } \dif{u}}%
+=\frac{1}{2a} { \ln\abs{ \frac{u-a}{ u+a } } }+C
+%
+}
+
+\end{samepage}

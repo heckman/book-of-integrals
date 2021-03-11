@@ -1,0 +1,25 @@
+\begin{samepage}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+I_{15}
+=&  \int  \csc{u} \dif u \\
+=&  \int  \csc{u}
+    \cdot \frac{ \csc{u} + \cot{u} }
+              { \csc{u} + \cot{u} } \dif u \\
+=&  \int  \frac{ \csc^2{u} + \csc{u} \cdot \cot{u}}
+              {\csc{u} + \cot{u}} \dif u
+\nb{\sub}[\quad
+             v =  \csc{u} + \cot{u}
+\andso  \dif{v}=& -\csc^2{u} + \csc{u}\cot{u}\dif{u} \\
+\andso -\dif{v}=& \csc^2{u} + \csc{u}\cot{u}\dif{u}
+]
+=&  \int \frac{-\dif{v}}{v} \\
+=&  -\int \frac{1}{v} \dif v \\
+=&  -\ln \abs{v} + C
+\nb\unsub
+=&  -\ln \abs{\csc{u} + \cot{u}} + C
+\end{align*}
+
+\footeqn{15}{ \int\csc{u}\dif{u}=-\ln\abs{\csc{u}+\cot{u}} + C }
+
+\end{samepage}

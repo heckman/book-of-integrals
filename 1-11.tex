@@ -1,0 +1,52 @@
+\begin{samepage}
+\newcommand{\inum}[1]{\mathbf{#1.}\enspace}
+\newcommand{\s}[2][\footnotesize]{\mbox{#1\(\displaystyle{#2}\)}}
+\newcommand{\tint}{\s{\int}}
+\setlength{\jot}{0.618em}
+\begin{align*}
+% &\int  cf(u) \dif{u} = c\int f(u) \dif{u} \\
+% &\int  k \dif{u} = ku + C
+    \inum{1}   &\tint  u\dif v  =  uv - \tint v \dif u
+\\  \inum{2}   &\tint  u^n\dif u  =  \frac{ u^{n+1} }{ \s{n+1} } + C,\enspace n\ne-1
+\\  \inum{3}   &\tint  \s{\frac{ 1 }{ u }} \dif u =  \ln\abs{u} + C
+\\  \inum{4}   &\tint e^u\dif u  =  e^u + C
+\\  \inum{5}   &\tint  a^u\dif u  =  \frac{ a^u }{ \ln a } + C
+\\  \inum{6}   &\tint  \sin u \dif u =  -\cos u + C
+\\  \inum{7}   &\tint  \cos u \dif u =  \sin u + C
+\\  \inum{8}   &\tint  \sec^2u \dif u =  \tan u + C
+\\  \inum{9}   &\tint  \csc^2u \dif u =  -\cot u + C
+\\  \inum{10}  &\tint  \sec u \tan u \dif u =  \sec u + C
+\\  \inum{11}  &\tint  \csc u \cot u \dif u =  -\csc u + C
+\\  \inum{103} &\tint  \sinh u \dif u = \cosh u + C
+\\  \inum{104} &\tint  \cosh u \dif u  =  \sinh u + C
+\end{align*}
+
+% 1-11,103,104
+% \begin{gather*}
+% % &\int  cf(u) \dif{u} = c\int f(u) \dif{u} \\
+% % &\int  k \dif{u} = ku + C
+% \\  \inum{1}   \int  u\dif v  =  uv - \int v \dif u
+% \\  \inum{2}   \int  u^n\dif u  =  \frac{ u^{n+1} }{ n+1 } + C,\enspace n\ne-1
+% \\\begin{aligned}
+% \\  \inum{3}   &\int  \frac{ 1 }{ u } \dif u =  \ln\abs{u} + C
+% \sep\inum{6}   &\int  \sin u \dif u =  -\cos u + C
+% \\  \inum{4}   &\int  e^u\dif u  =  e^u + C
+% \sep\inum{7}   &\int  \cos u \dif u =  \sin u + C
+% \\  \inum{5}   &\int  a^u\dif u  =  \frac{ a^u }{ \ln a } + C
+% \sep\inum{8}   &\int  \sec^2u \dif u =  \tan u + C
+% \\ &\
+% \sep\inum{9}   &\int  \csc^2u \dif u =  -\cot u + C
+% \\  \inum{103} &\int  \sinh u \dif u = \cosh u + C
+% \sep\inum{10}  &\int  \sec u \tan u \dif u =  \sec u + C
+% \\  \inum{104} &\int  \cosh u \dif u  =  \sinh u + C
+% \sep\inum{11}  &\int  \csc u \cot u \dif u =  -\csc u + C
+% \end{aligned}
+% \end{gather*}
+\vspace*{2em}
+\centering
+\resizebox{0.75\columnwidth}{!}{
+These integrals can be used without explanation
+}%
+
+\end{samepage}
+\columnbreak

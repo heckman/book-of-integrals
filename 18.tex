@@ -1,0 +1,37 @@
+\begin{samepage}
+\def\no{18}
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int  \frac{1}{u \sqrt{u^2-a^2}} \dif u
+%
+\nb{\sub\sohcahtoa*{\sqrt{u^2-a^2}}{a}{u}\\}[
+  \text{and so}\quad u=a\sec\theta
+  \andso \dif{u}=&a\sec\theta\tan\theta\dif\theta \\[1em]
+  \text{and}\quad \sqrt{u^2-a^2}=&a\tan\theta
+]
+%
+{I}_{\no}
+=&  \int
+      \frac {a\sec\theta\tan\theta}
+            {a\sec\theta\cdot a\tan\theta}
+    \dif\theta \\
+=&  \int \frac{1}{a} \dif\theta \\
+=&  \frac{1}{a}\theta + C \nb{\unsub*}[\quad
+      u=a\sec\theta \andso \theta=\arcsec\frac{u}{a}
+    ]
+=&  \frac{1}{a}\arcsec{\frac{u}{a}} + C
+\end{align*}
+
+
+
+\footeqn{\no}{
+\int{\frac{1}{u \sqrt{u^2-a^2}}}\;\dif{u}
+\enspace=\enspace%
+\frac{1}{a}\arcsec{\frac{u}{a}}\;+\;C
+}
+%
+
+\end{samepage}
