@@ -1,6 +1,6 @@
 # Book of Integrals
 
-Solutions to some common integrals—a study aid for MATH 110B-Calculus II at CCSF.
+Solutions to some common integrals—a study aid for MATH 110B: Calculus II at CCSF.
 
 The integrals are numbered corresponding to the reference pages of Stewart's Calculus Early transcendentals, 8th edition.
 
