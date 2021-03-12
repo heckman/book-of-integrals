@@ -206,6 +206,13 @@ bottom=2pc,
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\arccsc}{arccsc}
 
+\newcommand{\sectionpage}[1]{
+\vspace*{10pc}
+\centering
+\section*{#1}
+\cleardoublepage
+}
+
 \newcommand*\circled[1]{%
 \tikz[baseline=(char.base)]{%
 \useasboundingbox (0,-.3) rectangle (0,0.3);
