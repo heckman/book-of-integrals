@@ -46,6 +46,7 @@
 \setlength{\columnsep}{4pc}
 \setlength{\columnseprule}{0.0001pt}
 
+
 \RequirePackage[
 nomarginpar,
 landscape,
@@ -171,17 +172,18 @@ bottom=2pc,
 
 % \pagestyle{fancy}
 % \fancyhf{}
-% % custom header
-% \fancypagestyle{firstpage}{\rhead{}}
+% % % custom header
+% % \fancypagestyle{firstpage}{\rhead{}}
 
-% \renewcommand{\headrulewidth}{0.75pt}% 2pt header rule
-% \renewcommand{\headrule}{\hbox to\headwidth{%
-%   \color{airforceblue}\leaders\hrule height \headrulewidth\hfill
-% }}
+% % \renewcommand{\headrulewidth}{0.75pt}% 2pt header rule
+% % \renewcommand{\headrule}{\hbox to\headwidth{%
+% %   \color{airforceblue}\leaders\hrule height \headrulewidth\hfill
+% % }}
 % \renewcommand{\footrulewidth}{0.75pt}% 2pt header rule
 % \renewcommand{\footrule}{\hbox to\headwidth{%
 %   \color{airforceblue}\leaders\hrule height \footrulewidth\hfill
 % }}
+
 
 % % ASSIGNMENT #
 % \makeatletter
@@ -215,7 +217,7 @@ bottom=2pc,
 
 \newcommand*\circled[1]{%
 \tikz[baseline=(char.base)]{%
-\useasboundingbox (0,-.3) rectangle (0,0.3);
+% \useasboundingbox (0,-.3) rectangle (0,0.3);
 \node[shape=circle,draw,inner sep=1.25pt] (char) {#1};%
 % \tkzShowBB%
 }}
@@ -231,6 +233,7 @@ bottom=2pc,
 % }
 
 % for pages to be bound in a small binder
+%TODO: make this fake footer a real footer
 \NewDocumentCommand{\footeqnleft}{ m m }{%
 \;\circled{#1}%
 \hfill%
@@ -239,16 +242,18 @@ bottom=2pc,
 }
 % \newcommand{\leftside}{\def\side{L}}
 % \newcommand{\rightside}{\def\side{L}}
-
+%TODO: make this fake footer a real footer
 \NewDocumentCommand{\footeqnright}{ m m }{%
+\begin{minipage}{\columnwidth}
 \hfill%
 \resizebox{!}{20pt}{\textls{\(\displaystyle #2\)}}%
 \hfill%
 \circled{#1}%
+\end{minipage}
 }
 
 \NewDocumentCommand{\footeqn}{ o m m }{%
-\vspace*{\fill}
+\vspace{\fill}
 \noindent\rule{\columnwidth}{0.5pt}\vspace{1.5em}\\
 \ifdefstring{\side}{R}
   {\footeqnright{#2}{#3}}%
@@ -389,15 +394,16 @@ Simplify%
 % \tkzShowBB
 \end{tikzpicture}
 }
-\NewDocumentCommand{\sohcahtoa}{sO{\theta}mmm}{
+\NewDocumentCommand{\sohcahtoa}{sO{\quad}O{0pt}O{\theta}mmm}{
 \(
-\enspace\sin{#2}=\dfrac{#3}{#5},
-\enspace\cos{#2}=\dfrac{#4}{#5}
-\andso\tan{#2}=\dfrac{#3}{#4}
-\)\quad%
-\IfBooleanTF{#1}%
-  {\sohcahtoabare*[#2]{#3}{#4}{#5}}%
-  {\sohcahtoabare[#2]{#3}{#4}{#5}}%
+\enspace\sin{#4}=\dfrac{#5}{#7},
+\enspace\cos{#4}=\dfrac{#6}{#7}
+\andso\tan{#4}=\dfrac{#5}{#6}
+\)#2%
+\raisebox{#3}{\IfBooleanTF{#1}%
+{\sohcahtoabare*[#4]{#5}{#6}{#7}}%
+{\sohcahtoabare[#4]{#5}{#6}{#7}}%
+}
 }
 
 

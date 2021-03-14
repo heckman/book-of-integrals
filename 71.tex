@@ -1,0 +1,40 @@
+\begin{samepage}
+\def\no{71}
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int  \sec^3 u  \dif u
+\parts*{\sec u}   {\sec u \tan u}
+      {\sec^2 u} {\tan u}
+\\
+=&  \sec u \tan u - \int  \sec u \tan^2 \dif u
+\\
+=&  \sec u \tan u - \int  \sec u (\sec^2 u - 1) \dif u
+\\
+=&  \sec u \tan u - \int  \sec^3 u  \dif u
+                  + \int  \sec u    \dif u
+\\
+2 \int  \sec^3 u  \dif u
+=& \sec u \tan u + \int  \sec u    \dif u
+\\
+\int  \sec^3 u  \dif u
+=&  \frac{1}{2}\sec u \tan u
+  + \frac{1}{2}\int  \sec u  \dif u
+\\
+=&  \frac{1}{2}\sec u \tan u
+  + \frac{1}{2}\ln\abs{\sec u+\tan u} +C
+%
+\end{align*}
+%
+%
+\footeqn{\no}{
+\int\sec^3{u}\,\dif{u}
+\,=\,
+\frac{1}{2}\sec{u}\,\tan{u}
++\frac{1}{2}\ln\abs{\sec{u}+\tan{u}}+C
+}
+%
+\end{samepage}
+\columnbreak%
