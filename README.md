@@ -15,7 +15,7 @@ So far solutions are included to the integrals numbered
 
 ## Output
 
-The page sequence may appead odd.
+The page sequence may appear odd.
 
 The intention is to print the document double-sided, cut each page in half, and put the pages in a small binder.
 

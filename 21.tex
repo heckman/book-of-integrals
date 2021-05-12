@@ -1,21 +1,21 @@
-\begin{samepage}
 \def\no{21}
+\def\theintegral{\(\int{\! \!}\sqrt{a^2\!+\!u^2}\dif{u}
+\,=\,
+\frac{u}{2}\sqrt{u^2\!+\!a^2}
+\,+\,
+\frac{a^2}{2}\ln\abs{u\!+{\! \!}\sqrt{u^2\!-\!a^2}}
++C\)}
+
 % \def\aroundarrows{\mspace{18mu}}
 % \def\andsoarrow{\Rightarrow}
 \begin{align*}
 % \renewcommand{\baselinestretch}{2}
 {I}_{\no}
 =&  \int \sqrt{ a^2 + u ^2 } \dif u
-\nb{\sub\sohcahtoa[\qquad\qquad]{u}{a}{\sqrt{ a^2 + u ^2 }
-% TODO: make this hack unnecessary
-\! \! \! \! \! \! \! \!}\\}[\text{and so}\quad
-      u = a\tan\theta
-    \andso
-      &\dif{u}=a\sec\theta\tan\theta\dif\theta
-    \qquad
-  \\
-    \quad\text{ and }\quad
-      \sqrt{u^2+a^2}& = a\sec\theta ]
+\nb{\sub\sohcahtoa[\quad][4ex]{u}{a}{\sqrt{ a^2 + u ^2 }}\\}[
+  \rule{0pt}{4ex}\text{and so}\quad u = a\tan\theta
+  \andso  &\dif{u}=a\sec\theta\tan\theta\dif\theta \qquad\\
+  \quad\text{ and }\quad \sqrt{u^2+a^2}& = a\sec\theta ]
 % \int \sqrt{ a^2 + u ^2 } \dif u
 =&  a\sec\theta a\sec^2\theta \dif\theta
 \\%[-0.5em]
@@ -62,16 +62,3 @@
   + C
 %
 \end{align*}
-%
-%
-\footeqn{\no}{
-\int{\! \!}\sqrt{a^2\!+\!u^2}\dif{u}
-\,=\,
-\frac{u}{2}\sqrt{u^2\!+\!a^2}
-\,+\,
-\frac{a^2}{2}\ln\abs{u\!+{\! \!}\sqrt{u^2\!-\!a^2}}
-+C
-}
-%
-\end{samepage}
-\columnbreak%

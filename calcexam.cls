@@ -10,7 +10,6 @@
 \RequirePackage[framemethod=TikZ]{mdframed}
 \RequirePackage{floatrow}
 \RequirePackage[showzone=false]{datetime2}
-
 \RequirePackage{tkz-euclide}
 \RequirePackage{anyfontsize}
 \RequirePackage{multicol}
@@ -30,47 +29,49 @@
 \RequirePackage{commath}
 \RequirePackage{microtype}
 \usepackage{xstring}
-
 % \RequirePackage{changepage}
-
-
 \RequirePackage{enumitem}
-
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 % \RequirePackage{graphicx}% images from mwe package
-
-\setlength{\parindent}{0em}
-\setlength{\parskip}{1em}
-\setlength{\mathindent}{1em}
-\setlength{\columnsep}{4pc}
-\setlength{\columnseprule}{0.0001pt}
-
-
 \RequirePackage[
+  paperheight=8.5in,
+  paperwidth=5.5in,
+width=26pc,
+height=42pc,
 nomarginpar,
-landscape,
+% left=3.5pc,
+% landscape,
 % headheight=2pc,
 footskip=2pc,
 % headsep=0pc,
 % top=9pc,
 % height=48pc,
 % width=56pc,
-left=2pc,
-right=2pc,
-top=4pc,
-bottom=2pc,
-% bindingoffset=2pc,
+% right=2pc,
+% top=4pc,
+% bottom=6pc,
+bindingoffset=2pc,
 %  heightrounded,
 % showframe,
 % verbose,
 % includefoot,
 ]{geometry}
 
+%%%%%%%%%%%%%%%%%%% LENGTHS
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\setlength{\mathindent}{1em}
+% \setlength{\columnsep}{4pc}
+% \setlength{\columnseprule}{0.0001pt}
+
+%%%%%%%%%%%%%%%%%%% COLOURS
 
 \definecolor{beaublue}{cmyk}{0.15, 0.07, 0,0.15}% rgb 89, 134, 166}
 \definecolor{airforceblue}{cmyk}{0.45, 0.20, 0, 0.35}
 
+%%%%%%%%%%%%%%%%%%% FRAMES
 
 \mdfdefinestyle{solution}{%
     userdefinedwidth=\textwidth,
@@ -96,6 +97,8 @@ bottom=2pc,
     rightline=false,
 }
 
+%%%%%%%%%%%%%%%%%%% TIME & DATE
+
 % \DTMnewstyle{iso}
 % {\renewcommand*{\DTMdisplaydate}[4]{##1 \DTMtwodigits{##2}\DTMtwodigits{##3}}\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}}
 % {\renewcommand*{\DTMdisplaytime}[3]{\DTMtwodigits{##1}\DTMtwodigits{##2}}}
@@ -105,8 +108,6 @@ bottom=2pc,
 % \DTMdisplaytime{##5}{##6}{##7}\ifDTMshowzone
 % \DTMdisplayzone{##8}{##9}\fi}\renewcommand*{\DTMDisplay}{\DTMdisplay}
 % }
-
-
 % custom date style
 \DTMnewstyle{threefours}
 {\renewcommand*{\DTMdisplaydate}[4]{##1 \DTMtwodigits{##2}\DTMtwodigits{##3}}\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}}
@@ -119,7 +120,6 @@ bottom=2pc,
 }
 
 
-
 % \pagenumbering{gobble}
 \interlinepenalty=\maxdimen%
 \raggedcolumns%
@@ -128,6 +128,9 @@ bottom=2pc,
 \def\prompt#1{\gdef\@prompt{#1}}\def\@prompt{}
 \def\prompttitle#1{\gdef\@prompttitle{#1}}\def\@prompttitle{}
 % \newif\ifprompt\promptfalse
+
+
+%%%%%%%%%%%%%%%%%%% ASSIGNMENT-SPECIFIC
 
 \newcommand{\displayprompt}{
   \begin{mdframed}[style=prompt]
@@ -170,50 +173,85 @@ bottom=2pc,
 \newcommand{\@assignment}{}
 \makeatother
 
-% \pagestyle{fancy}
-% \fancyhf{}
-% % % custom header
-% % \fancypagestyle{firstpage}{\rhead{}}
+%%%%%%%%%%%%%%%%%%% END ASSIGNMENT-SPECIFIC
 
-% % \renewcommand{\headrulewidth}{0.75pt}% 2pt header rule
-% % \renewcommand{\headrule}{\hbox to\headwidth{%
-% %   \color{airforceblue}\leaders\hrule height \headrulewidth\hfill
-% % }}
+
+\renewcommand{\headrule}{}
+\pagestyle{fancy}
+\fancyhf{}
+% % custom header
+% \fancypagestyle{firstpage}{\rhead{}}
+
+% \renewcommand{\headrulewidth}{0.75pt}% 2pt header rule
+% \renewcommand{\headrule}{\hbox to\headwidth{%
+%   \color{airforceblue}\leaders\hrule height \headrulewidth\hfill
+% }}
 % \renewcommand{\footrulewidth}{0.75pt}% 2pt header rule
 % \renewcommand{\footrule}{\hbox to\headwidth{%
 %   \color{airforceblue}\leaders\hrule height \footrulewidth\hfill
 % }}
 
 
-% % ASSIGNMENT #
-% \makeatletter
-% \fancyhead[LO,LE]{
-% \ifthenelse{\value{page}=1}{}{\small\sffamily\bfseries\MakeUppercase{\@assignment}}
-% }
-% % draft
-% \fancyfoot[LO,LE]{
-% \DTMsetstyle{threefours}
-% \ifthenelse{\equal{\@draft}{}}{}{\small\texttt{\color{beaublue}\DTMnow\hspace{2em}\@draft}}
-% }
-% % page/of
-% \fancyfoot[RO,LE]{\small\sffamily\bfseries\thepage/\pageref*{LastPage}}
+% ASSIGNMENT #
+\makeatletter
+% draft
+\fancyfoot[LO,LE]{
+\DTMsetstyle{threefours}
+\ifthenelse{\equal{\@draft}{}}{}{\small\texttt{\color{beaublue}\DTMnow\hspace{2em}\@draft}}
+}
+% \def\no{foo}
+% \def\theintegral{bar}
+% page/of
+\fancyfoot[RO,LE]{\circled\no}
 % \makeatother
 % \fancypagestyle{plain}{
 % \renewcommand{\headrulewidth}{0pt}
 % }
+\fancyfoot[C]{\theintegral}
+\makeatother
+% \fancypagestyle{plain}{
+% \renewcommand{\headrulewidth}{0pt}
+% }
+
+\fancypagestyle{blankpage}{
+  \fancyfoot{}%
+  \fancyhead{}%
+}
+\NewDocumentCommand\blankpage
+{
+sO{This page is intentionally blank.}
+}{
+\thispagestyle{empty}
+\IfBooleanTF#1{\null}{#2}
+\clearpage
+}
+
+
+% \renewcommand{\headrulewidth}{0.75pt}% 2pt header rule
+% \renewcommand{\headrule}{\hbox to\headwidth{%
+%   \color{airforceblue}\leaders\hrule height \headrulewidth\hfill
+% }}
+% \renewcommand{\footrulewidth}{0.75pt}% 2pt header rule
+% \renewcommand{\footrule}{\hbox to\headwidth{%
+%   \color{airforceblue}\leaders\hrule height \footrulewidth\hfill
+% }}
+
 
 \pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%% CUSTOM MATH OPERATORS
 
 \DeclareMathOperator{\arcsec}{arcsec}
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\arccsc}{arccsc}
 
-\newcommand{\sectionpage}[1]{
-\vspace*{10pc}
-\centering
-\section*{#1}
-\cleardoublepage
-}
+
+% \newcommand{\sectionpage}[1]{
+% \vspace*{10pc}
+% \centering
+% \section*{#1}
+% \cleardoublepage
+% }
 
 \newcommand*\circled[1]{%
 \tikz[baseline=(char.base)]{%
@@ -234,43 +272,46 @@ bottom=2pc,
 
 % for pages to be bound in a small binder
 %TODO: make this fake footer a real footer
-\NewDocumentCommand{\footeqnleft}{ m m }{%
-\;\circled{#1}%
-\hfill%
-\resizebox{!}{20pt}{\textls{\(\displaystyle #2\)}}%
-\hfill\;%
-}
+% \NewDocumentCommand{\footeqnleft}{ m m }{%
+% \;\circled{#1}%
+% \hfill%
+% \resizebox{!}{20pt}{\textls{\(\displaystyle #2\)}}%
+% \hfill\;%
+% }
 % \newcommand{\leftside}{\def\side{L}}
 % \newcommand{\rightside}{\def\side{L}}
 %TODO: make this fake footer a real footer
-\NewDocumentCommand{\footeqnright}{ m m }{%
-\begin{minipage}{\columnwidth}
-\hfill%
-\resizebox{!}{20pt}{\textls{\(\displaystyle #2\)}}%
-\hfill%
-\circled{#1}%
-\end{minipage}
-}
+% \NewDocumentCommand{\footeqnright}{ m m }{%
+% \begin{minipage}{\columnwidth}
+% \hfill%
+% \resizebox{!}{20pt}{\textls{\(\displaystyle #2\)}}%
+% \hfill%
+% \circled{#1}%
+% \end{minipage}
+% }
 
-\NewDocumentCommand{\footeqn}{ o m m }{%
-\vspace{\fill}
-\noindent\rule{\columnwidth}{0.5pt}\vspace{1.5em}\\
-\ifdefstring{\side}{R}
-  {\footeqnright{#2}{#3}}%
-  {\ifdefstring{\side}{L}
-    {\footeqnleft{#2}{#3}}%
-    {\ifstrequal{#1}{R}%
-        {\footeqnright{#2}{#3}}%
-        {\ifstrequal{#1}{L}%
-          {\footeqnleft{#2}{#3}}%
-          {\ifnumodd{#2}%
-            {\footeqnright{#2}{#3}}%
-            {\footeqnleft{#2}{#3}}%
-          }
-        }
-    }
-  }
-}
+% \NewDocumentCommand{\footeqn}{ o m m }{%
+% \vspace{\fill}
+% \noindent\rule{\columnwidth}{0.5pt}\vspace{1.5em}\\
+% \ifdefstring{\side}{R}
+%   {\footeqnright{#2}{#3}}%
+%   {\ifdefstring{\side}{L}
+%     {\footeqnleft{#2}{#3}}%
+%     {\ifstrequal{#1}{R}%
+%         {\footeqnright{#2}{#3}}%
+%         {\ifstrequal{#1}{L}%
+%           {\footeqnleft{#2}{#3}}%
+%           {\ifnumodd{#2}%
+%             {\footeqnright{#2}{#3}}%
+%             {\footeqnleft{#2}{#3}}%
+%           }
+%         }
+%     }
+%   }
+% }
+
+
+%%%%%%%%%%%%%%%%%%% MATH MODE SHORTCUTS
 
 
 \NewDocumentCommand{\andso}{ s }{%
