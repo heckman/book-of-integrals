@@ -1,0 +1,35 @@
+\def\no{72}
+\def\theintegral{\(\int\csc^3{u}\,\dif{u}
+\,=\,
+-\frac{1}{2}\csc{u}\,\cot{u}
++\frac{1}{2}\ln\abs{\csc{u}-\cot{u}}+C
+\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int  \csc^3 u  \dif u
+\parts*{\csc u}   {-\csc u \cot u}
+      {\csc^2 u} {-\cot u}
+\\
+=& -\csc u \cot u - \int  \csc u \cot^2 \dif u
+\\
+=& -\csc u \cot u - \int  \csc u (\csc^2 u - 1) \dif u
+\\
+=& -\csc u \cot u - \int  \csc^3 u  \dif u
+                  + \int  \csc u    \dif u
+\\
+2 \int  \csc^3 u  \dif u
+=& -\csc u \cot u + \int  \csc u    \dif u
+\\
+\int  \csc^3 u  \dif u
+=& -\frac{1}{2}\csc u \cot u
+  + \frac{1}{2}\int  \csc u  \dif u
+\\
+=&  \frac{1}{2}\csc u \cot u
+  + \frac{1}{2}\ln\abs{\csc u-\cot u} +C
+%
+\end{align*}
+%

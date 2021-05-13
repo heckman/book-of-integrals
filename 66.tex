@@ -1,0 +1,18 @@
+\def\no{66}
+\def\theintegral{\(\int\cot^2{u}\;\dif{u}
+\enspace=\enspace%
+-\cot{u}\;-\;u\;+\;C\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int  \cot^2 u  \dif u
+  \nb{Rewrite using trigonometric identity }[
+    \tan^2 u = \csc^2 u -1
+  ]
+=&  \int  \csc^2 u -1  \dif u
+\\
+=&  -\cot u - u + C
+\end{align*}

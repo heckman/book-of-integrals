@@ -1,0 +1,18 @@
+\def\no{82}
+\def\theintegral{\(\int {u}\sin{u}\;\dif{u}
+\enspace=\enspace%
+\sin{u}\;-\;u\,\cos{u}\;+\;C\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int u \sin u \dif u
+\parts*
+  {u}       {1}%
+  {\sin{u}} {-\cos{u}} \\
+=&  \int \cos u \dif u  -  u \cos u
+\\
+=&  \sin u - u \cos u
+\end{align*}
