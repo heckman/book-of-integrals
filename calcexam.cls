@@ -34,6 +34,8 @@
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 % \RequirePackage{graphicx}% images from mwe package
+\RequirePackage{pdfpages}
+
 \RequirePackage[
   paperheight=8.5in,
   paperwidth=5.5in,
