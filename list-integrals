@@ -1,19 +1,10 @@
 #!/usr/bin/env bash
 shopt -s extglob
 
-# for file in $(ls +([0-9]).tex | sort -n)
-# do
-# cat $file | awk '
-# match($0, /\\def\\no{[^}]*/) {n=substr($0, RSTART+8, RLENGTH-8)}
-# match($0, /\\def\\theintegral{[^=]*/) {i=substr($0, RSTART+19, RLENGTH-19)}
-# END{print "\\listintegral{" n "}{" i "}"}'
-# done
-
-
 # for file in 13.tex 14.tex 18.tex
 for file in $(ls +([0-9]).tex | sort -n)
 do
-cat $file | awk '
+cat "$file" | awk '
 BEGIN{going=1;reading=0}
 /^\\def\\no{[^}]*/ {n=substr($0, 9, length($0)-9)}
 going && /^\\def\\theintegral{.*\\)}/ { i=substr($0, 20, length($0)-22);going=0}

@@ -8,16 +8,19 @@ There is a table of the first 11 integrals, which we are permitted to use withou
 
 So far solutions are included to the integrals numbered
 
-- 12 to 20
-- 63 and 64
+- 12 to 21
+- 63 to 66
+- 71 and 72
+- 82 and 83
+- 92
 - 96 and 97
 - 100 and 102
 
 ## Output
 
-The page sequence may appear odd.
+## Index
 
-The intention is to print the document double-sided, cut each page in half, and put the pages in a small binder.
+To generate the index of integrands, run `./list-integrals > integral-list.tex`.
 
 ## LaTeX
 
