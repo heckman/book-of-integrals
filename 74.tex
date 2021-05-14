@@ -1,0 +1,30 @@
+\def\no{74}
+\def\theintegral{\(\int\cos^n{u}\;\dif{u}
+\enspace=\enspace%
+\tfrac{1}{n}\,\cos^{n-1}{u}\;\sin{u}
+\,+\,
+\tfrac{n-1}{n}\,\int\cos^{n-2}u\;\dif{u}
+\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int\sin^n{u}\dif{u}
+\parts*
+  { \cos^{n-1}u} {  -(n-1)\cos^{n-2}{u}\sin{u}  }%
+  { \cos u  }     {  \sin u  } \\
+=& \cos^{n-1}{u}\,\sin{u} + (n-1)\int \cos^{n-2}{u}\sin^2{u}\dif{u}\\
+=& \cos^{n-1}{u}\,\sin{u} + (n-1)\int \cos^{n-2}{u}(1-\cos^2{u})\dif{u}\\
+=& \cos^{n-1}{u}\,\sin{u} + (n-1)
+    \left(
+        \int \cos^{n-2}{u}\dif{u} - \int \cos^{n}{u} \dif{u}
+    \right)
+\end{align*}
+\begin{align*}
+1+(n-1)\int\cos^n{u}\dif{u}
+=& \cos^{n-1}{u}\,\sin{u} + (n-1)\int \cos^{n-2}{u}\dif{u} \\
+\int\cos^n{u}\dif{u}
+=& \frac{1}{n}\cos^{n-1}{u}\,\sin{u} + \frac{(n-1)}{n}\int \cos^{n-2}{u}\dif{u}
+\end{align*}

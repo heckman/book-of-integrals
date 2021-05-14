@@ -1,0 +1,30 @@
+\def\no{73}
+\def\theintegral{\(\int\sin^n{u}\;\dif{u}
+\enspace=\enspace%
+-\tfrac{1}{n}\,\sin^{n-1}{u}\;\cos{u}
+\,+\,
+\tfrac{n-1}{n}\,\int\sin^{n-2}u\;\dif{u}
+\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int\sin^n{u}\dif{u}
+\parts*
+  { \sin^{n-1}u} {  (n-1)\sin^{n-2}{u}\cos{u}  }%
+  { \sin u  }     {  -\cos u  } \\
+=& -\sin^{n-1}{u}\,\cos{u} + (n-1)\int \sin^{n-2}{u}\cos^2{u}\dif{u}\\
+=& -\sin^{n-1}{u}\,\cos{u} + (n-1)\int \sin^{n-2}{u}(1-\sin^2{u})\dif{u}\\
+=& -\sin^{n-1}{u}\,\cos{u} + (n-1)
+    \left(
+        \int \sin^{n-2}{u}\dif{u} - \int \sin^{n}{u} \dif{u}
+    \right)
+\end{align*}
+\begin{align*}
+1+(n-1)\int\sin^n{u}\dif{u}
+=& -\sin^{n-1}{u}\,\cos{u} + (n-1)\int \sin^{n-2}{u}\dif{u} \\
+\int\sin^n{u}\dif{u}
+=& -\frac{1}{n}\sin^{n-1}{u}\,\cos{u} + \frac{(n-1)}{n}\int \sin^{n-2}{u}\dif{u}
+\end{align*}
