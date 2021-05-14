@@ -1,0 +1,29 @@
+\def\no{77}
+\def\theintegral{\(\int\sec^n{u}\;\dif{u}
+\enspace=\enspace%
+\tfrac{1}{n-1}\,\tan u\,\sec^{n-2}{u}
+\,+\,
+\tfrac{n-2}{n-1}\,\int\sec^{n-2}u\;\dif{u}
+\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int\sec^n{u}\dif{u}
+\parts
+  { \sec^2u     }{ \tan u }%
+  { \sec^{n-2}u }{ (n-2)\sec^{n-3}{u}\sec{u}\tan{u}}\\
+=&  \tan u\,\sec^{n-2}u-(n-2)\int\sec^{n-2}\tan^2u\dif u\\
+=&  \tan u\,\sec^{n-2}u-(n-2)\int\sec^{n-2}(\sec^2u-1)\dif u\\
+=&  \tan u\,\sec^{n-2}u-(n-2)\left(
+      \int \sec^{n}u\dif u  -  \int\sec^{n-2}\dif u
+    \right)
+\end{align*}
+\begin{align*}
+(1+(n-2))\int\sec^n{u}\dif{u}
+=& \tan u\,\sec^{n-2}u-(n-2)\int\sec^{n-2}\dif u \\
+\int\sec^n{u}\dif{u}
+=& \frac{1}{n-1}\tan u\,\sec^{n-2}u-\frac{n-2}{n-1}\int\sec^{n-2}\dif u \\
+\end{align*}

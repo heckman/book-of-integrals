@@ -1,0 +1,27 @@
+\def\no{75}
+\def\theintegral{\(\int\tan^n{u}\;\dif{u}
+\enspace=\enspace%
+\tfrac{1}{n-1}\,\tan^{n-1}{u}
+\,-\,
+\int\tan^{n-2}u\;\dif{u}
+\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int\tan^n{u}\dif{u} \\
+=&  \int\tan^{n-2}{u}\tan^2u\dif{u} \\
+=&  \int\tan^{n-2}{u}(\sec^2u-1)\dif{u} \\
+=&  \int\tan^{n-2}{u}\,\sec^2u\dif{u}
+   -\int\tan^{n-2}{u}\dif{u}
+\nb\sub[\quad
+v = \tan u  \andso   \dif v = \sec^2 u \dif u
+]%
+=&  \int v^{n-2}{u}\dif{v}-\int\tan^{n-2}{u}\\
+=&  \frac{1}{n-1}{v^{n-1}}-\int\tan^{n-2}{u}\\
+=&  \frac{1}{n-1}{\tan^{n-1}u}-\int\tan^{n-2}{u}
+%
+%
+\end{align*}

@@ -1,0 +1,27 @@
+\def\no{76}
+\def\theintegral{\(\int\cot^n{u}\;\dif{u}
+\enspace=\enspace%
+\tfrac{-1}{n-1}\,\cot^{n-1}{u}
+\,-\,
+\int\cot^{n-2}u\;\dif{u}
+\)}
+
+% \def\aroundarrows{\mspace{18mu}}w
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int\cot^n{u}\dif{u} \\
+=&  \int\cot^{n-2}{u}\cot^2u\dif{u} \\
+=&  \int\cot^{n-2}{u}(\csc^2u-1)\dif{u} \\
+=&  \int\cot^{n-2}{u}\,\csc^2u\dif{u}
+   -\int\cot^{n-2}{u}\dif{u}
+\nb\sub[\quad
+v = \cot u  \andso   \dif v = -\csc^2 u \dif u
+]%
+=&  -\int v^{n-2}{u}\dif{v}-\int\cot^{n-2}{u}\\
+=&  \frac{-1}{n-1}{v^{n-1}}-\int\cot^{n-2}{u}\\
+=&  \frac{-1}{n-1}{\cot^{n-1}u}-\int\cot^{n-2}{u}
+%
+%
+\end{align*}
