@@ -33,7 +33,7 @@
 \RequirePackage{enumitem}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
-% \RequirePackage{graphicx}% images from mwe package
+\RequirePackage{graphicx}
 \RequirePackage{pdfpages}
 
 \RequirePackage[

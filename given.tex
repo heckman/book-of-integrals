@@ -1,0 +1,42 @@
+{
+\def\no{I}
+\def\theintegral{These integrals can be used without explanation}
+
+\NewDocumentCommand{\givenintegral}{
+s%         star means no newline
+m%         number
+O{\int}%   integral sign
+m%         integrand
+O{\dif u}% differential sign
+m%         solution
+O{\enspace+\enspace{C}}% suffix
+}
+{
+  % \text{\raisebox{-2em}{\rule{0pt}{4em}}
+\text{\color{gray}{\scriptsize{#2}:}}
+&&
+{\color{gray}{#3}}
+\displaystyle%
+\quad {#4} \quad {\color{gray}{#5}}
+\quad &= \quad
+{#6}{\color{gray}{#7}}
+\IfBooleanF{#1}{\\}
+}%
+% \setlength{\jot}{0.618em}
+\setlength{\jot}{0.45em}
+\begin{align*}
+\givenintegral{1}{u}[\dif{v}]{uv-\int{v}\dif{u}}[]
+\givenintegral{2}{ u^n }{ \frac{u^{n+1}}{{n+1}}}[\enspace+\enspace{C},\enspace n\ne-1]
+\givenintegral{3}   { \frac{1}{u} }   {  \ln\abs{u} }
+\givenintegral{4}   { e^u }           {  e^u }
+\givenintegral{5}   { a^u }           {  \frac{ a^u }{ \ln a } }
+\givenintegral{6}   { \sin{u} }       { -\cos{u} }
+\givenintegral{7}   { \cos{u} }       {  \sin{u} }
+\givenintegral{8}   { \sec^2u }       {  \tan{u} }
+\givenintegral{9}   { \csc^2u }       { -\cot{u} }
+\givenintegral{10}  { \sec{u}\tan{u} }{  \sec{u} }
+\givenintegral{11}  { \csc{u}\cot{u} }{ -\csc{u} }
+\givenintegral{103} { \sinh{u} }      {  \cosh{u} }
+\givenintegral*{104}{ \cosh{u} }      {  \sinh{u} }
+\end{align*}
+}

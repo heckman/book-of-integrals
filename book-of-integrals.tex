@@ -3,8 +3,11 @@
 \begin{document}
 % if input is wrapped in a macro
 % latex-workshop will lose track of sub-files
-\input{1-11}\clearpage
-{\pagestyle{empty}\input{copyright}\clearpage}
+% \input{1-11}\clearpage
+{\pagestyle{empty}
+  \input{cover}\clearpage
+  \input{given}\clearpage
+}
 \input{12}\clearpage
 \input{13}\clearpage
 %
@@ -45,6 +48,8 @@
 %
 \input{100}\clearpage
 \input{102}\clearpage
-\blankpage*%
-{\pagestyle{empty}\input{index}}%
+{\pagestyle{empty}
+  \input{index}\clearpage
+  \input{copyright}
+}
 \end{document}
