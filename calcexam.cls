@@ -15,7 +15,7 @@
 \RequirePackage{multicol}
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}  % Number of pages in the document
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{ifthen}
 \RequirePackage{etoolbox}
 \RequirePackage{xparse}
