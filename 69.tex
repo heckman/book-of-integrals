@@ -1,0 +1,25 @@
+\def\no{69}
+\def\theintegral{\(\int\tan^3{u}\;\dif{u}
+\enspace=\enspace%
+\tfrac{1}{2}\,\tan^2u\,+\,\ln\abs{\cos u}\;+\;C\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int  \tan^3{u} \dif u \\
+=&  \int  (\sec^2u-1) \tan u \dif u \\
+=&  \int (\sec^2u\,\tan u)\dif u - \int \tan u \dif u
+\nb\sub[\quad
+v = \tan u  \andso   \dif v = \sec^2 u \dif u
+]%
+=&  \int v \dif v - \ln\abs{\sec u }\\
+=&  \frac{1}{2}v^2 - \ln\abs{\sec u } + C
+\nb\unsub
+=&  \frac{1}{2}\tan^2u - \ln\abs{\sec u } + C
+\nb\leaveit%
+=&  \frac{1}{2}\tan^2u + \ln\abs{\cos u } + C
+%
+\end{align*}
+

@@ -345,6 +345,12 @@ Simplify%
 \IfBooleanT{#1}{ for asethetic reasons}%
 }
 
+\NewDocumentCommand{\leaveit}{s}{%
+(which we%
+\IfBooleanTF{#1}{ will }{ could }%
+leave right there)
+}
+
 \NewDocumentCommand{\sub}{s O{} O{} }{
 \ifblank{#2}{%  no args     {Let}{%  no argsargs
 \IfBooleanTF{#1}%

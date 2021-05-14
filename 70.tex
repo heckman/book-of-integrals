@@ -1,0 +1,25 @@
+\def\no{70}
+\def\theintegral{\(\int\cot^3{u}\;\dif{u}
+\enspace=\enspace%
+-\tfrac{1}{2}\,\cot^2u\,-\,\ln\abs{\sin u}\;+\;C\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int  \cot^3{u} \dif u \\
+=&  \int  (\csc^2u-1) \cot u \dif u \\
+=&  \int (\csc^2u\,\cot u)\dif u - \int \cot u \dif u
+\nb\sub[\quad
+v = \cot u  \andso   \dif v = -\csc^2 u \dif u
+]%
+=&  - \int v \dif v - \ln\abs{\sin u }\\
+=&  -\frac{1}{2}v^2 - \ln\abs{\sin u } + C
+\nb\unsub
+=&  -\frac{1}{2}\cot^2u - \ln\abs{\sin u } + C
+\nb\leaveit%
+=&  -\frac{1}{2}\cot^2u - \ln\abs{\sin u } + C
+%
+\end{align*}
+

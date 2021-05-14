@@ -1,0 +1,26 @@
+\def\no{67}
+\def\theintegral{\(\int\sin^3{u}\;\dif{u}
+\enspace=\enspace%
+-\tfrac{1}{3}\,(2+\sin^2u)\,\cos u\;+\;C\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int  \sin^3{u} \dif u \\
+=&  \int  (1-\cos^2u) \sin u \dif u \\
+=&  \int \sin u \dif u - \int \cos^2 u\,\sin u \dif u
+\nb\sub[\quad
+v = \cos u  \andso   \dif v = -\sin u \dif u
+]%
+=&  \int v^2 \dif v - \cos u \\
+=&  \frac{1}{3} v^3 - \cos u + C
+\nb\unsub
+=&  \frac{1}{3} \cos^3 u - \cos u + C
+\nb\leaveit%
+=&  \left( \frac{1}{3} \cos^2 u - 1 \right) \cos u  + C\\
+=&  \left( \frac{1}{3} (1-\sin^2 u) - 1 \right) \cos u  + C\\
+=&  -\frac{1}{3}\left( 2 + \sin^2 u \right) \cos u  + C\\
+%
+\end{align*}
