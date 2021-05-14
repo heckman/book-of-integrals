@@ -1,0 +1,31 @@
+\def\no{78}
+\def\theintegral{\(\int\csc^n{u}\;\dif{u}
+\enspace=\enspace%
+\tfrac{-1}{n-1}\,\cot u\,\csc^{n-2}{u}
+\,+\,
+\tfrac{n-2}{n-1}\,\int\csc^{n-2}u\;\dif{u}
+\)}
+
+% \def\aroundarrows{\mspace{18mu}}
+% \def\andsoarrow{\Rightarrow}
+\begin{align*}
+% \renewcommand{\baselinestretch}{2}
+{I}_{\no}
+=&  \int\csc^n{u}\dif{u}
+\parts
+  { \csc^2u     }{ -\cot u }%
+  { \csc^{n-2}u }{ -(n-2)\csc^{n-3}{u}\csc{u}\cot{u}}\\
+=& -\cot u\,\csc^{n-2}u-(n-2)\int\csc^{n-2}\cot^2u\dif u\\
+=& -\cot u\,\csc^{n-2}u-(n-2)\int\csc^{n-2}(\csc^2u-1)\dif u\\
+=& -\cot u\,\csc^{n-2}u-(n-2)\left(
+      \int \csc^{n}u\dif u  -  \int\csc^{n-2}\dif u
+    \right)
+\end{align*}
+\begin{align*}
+(1+(n-2))\int\csc^n{u}\dif{u}
+=& -\cot u\,\csc^{n-2}u
+   +(n-2)\int\csc^{n-2}\dif u \\
+\int\csc^n{u}\dif{u}
+=&  \frac{-1}{n-1}\cot u\,\csc^{n-2}u
+   +\frac{n-2}{n-1}\int\csc^{n-2}\dif u \\
+\end{align*}
