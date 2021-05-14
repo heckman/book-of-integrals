@@ -179,7 +179,6 @@ bindingoffset=2pc,
 
 
 \renewcommand{\headrule}{}
-\pagestyle{fancy}
 \fancyhf{}
 % % custom header
 % \fancypagestyle{firstpage}{\rhead{}}
