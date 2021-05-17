@@ -1,0 +1,27 @@
+\begingroup
+\newcommand\n[1]{\text{\scriptsize\color{gray}\circled{#1}}}
+\[%
+\arraycolsep=1em\def\arraystretch{2}
+\begin{array}{rcll}
+    \od{}{u}{f(u)}   &        {f(u)}&   \int{f(u)}\dif u                  &
+\\\hline
+     e^u              &         e^u   &         e^u                         &
+\\   e^u              &         a^u   &   \dfrac{a^u}{\ln a}                 &
+\\  -u^{-2}           & \dfrac{1}{u}  &   \ln\abs{u}                        &
+\\   \dfrac{1}{u}     &       \ln u   &  u\ln\abs{u}-u                      &\n{100}
+\\   \cos u           &      \sin u   &  -\cos u                            &
+\\  -\sin u           &      \cos u   &   \sin u                            &
+\\   \sec^2u          &      \tan u   &   \ln\abs{\sec u}                   & \n{12}
+\\   \sec u \tan u    &      \sec u   &   \ln\abs{\sec u + \tan u}          & \n{14}
+\\  -\csc u \cot u    &      \csc u   &   \ln\abs{\csc u - \cot u}          & \n{15}
+\\  -\csc^2u          &      \cot u   &   \ln\abs{\sin u}                   & \n{13}
+\\  2\sin u \cos u    &    \sin^2{u}  &   \frac{1}{2}u - \frac{1}{4}\sin2u  & \n{63}
+\\ -2\sin u \cos u    &    \cos^2{u}  &   \frac{1}{2}u + \frac{1}{4}\sin2u  & \n{64}
+\\  2\tan u \sec^2 u  &    \tan^2{u}  &   \tan u - u                        & \n{65}
+\\  2\tan u \sec^2 u  &    \sec^2{u}  &   \tan u                            &
+\\ -2\cot u \csc^2 u  &    \csc^2{u}  &  -\cot u                            &
+\\ -2\cot u \csc^2 u  &    \cot^2{u}  &  -\cot u - u                        & \n{66}
+%
+\end{array}
+\]
+\endgroup

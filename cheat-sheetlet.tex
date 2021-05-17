@@ -1,0 +1,58 @@
+\documentclass{minimal}%
+\usepackage[letterpaper]{geometry}
+\usepackage{pdfpages}
+\begin{document}
+
+\includepdf%
+[pages=-,%
+nup=2x1,%
+% noautoscale,%
+% frame,%
+signature=4,% multiple of 4
+landscape,%
+]{build/cheat-sheet.pdf}
+
+\end{document}
+%
+% This can also be generated on the command line:
+%
+%   pdfjam         cheat-sheet.pdf \
+%     --outfile cheat-sheetlet.pdf \
+%     --keepinfo \
+%     --letterpaper \
+%     --landscape \
+%     --nup 2x1 \
+%     --signature=20 # this may vary
+%
+% or use my bash function which does the same thing,
+% (and which automatically calculates the signature size)
+%
+%   booklet book-of-integrals.pdf -o booklet-of-integrals.pdf
+%
+% function booklet()
+% {
+%   local source="$1"
+%   shift
+%   pdfjam \
+%     --keepinfo \
+%     --letterpaper \
+%     --landscape \
+%     --nup 2x1 \
+%     --signature $(pdfcount "$source" 4) \
+%     "$@"\
+%     -- "$source"
+% }
+%
+% which requires pdfjam, and also uses:
+%
+% function pdfcount()
+% {
+%   local mod='' # round up to a multiple of this
+%   local pdf="$1"
+%   if test ! -f "$1" ; then echo "file not found: $1"; else
+%     if [[ -n $2 ]]; then mod='+('$2'-$2%'$2')%'$2; fi
+%     pdftk "$pdf" dump_data | awk '/^NumberOfPages/{print$2'$mod'}'
+%   fi
+% }
+%
+% which requires pdftk

@@ -1,0 +1,206 @@
+\begingroup
+\begin{center}
+\begin{footnotesize}
+\setlength\jot{1em}
+\[
+\begin{gathered}
+%%%%%%%%%%%%%%%%
+\begin{gathered}[t]\textbf{Test for Divergence}\\
+\begin{alignedat}{2} &
+  \lim_{n\to\infty}a_n\ \text{does not exist}\;
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+  \\ &
+  \lim_{n\to\infty}a_n \ne 0
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+\end{alignedat}\end{gathered}
+%%%%
+% \quad
+\\%%
+%%%%
+\begin{gathered}[t]\textbf{\(p\)-series}\\
+\text{Where \(a_n=1/n^p,\ n\ge1\),}\\
+\begin{alignedat}{2} &
+  p>1\;
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{converges}
+\\ &
+  p\le1\;
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+\end{alignedat}\end{gathered}
+%%%%
+\quad
+% \\%%
+%%%%
+\begin{gathered}[t]\textbf{Telescoping Series}\\
+\text{If you're lucky you can collapse the terms.}\\
+\begin{alignedat}{2} &
+  \lim_{n\to\infty}s_n=s\ne\infty
+    &\enspace\implies\ &
+  {\small\sum}\,a_n= s
+  \\ &
+  \lim_{n\to\infty}s_n=\infty\text{ or }\nexists
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+\end{alignedat}\end{gathered}
+%%
+\\
+%%
+\begin{gathered}[t]\textbf{Geometric Series}\\
+\text{Where \(a_n=ar^{n-1},\ n\ge1\)}\\
+\begin{alignedat}{2} &
+  |r|<1
+    &\enspace\implies\ &
+  {\small\sum_{n=1}^\infty}\,a_n= \frac{a}{1-r}
+  \\ &
+  |r|\ge1
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+\end{alignedat}\end{gathered}
+%%%%%%%%%%%%%%
+\qquad
+% %%%%%%%%%%%%%%%%
+\begin{gathered}[t]\textbf{Taylor Series}\\
+\text{Where \(\displaystyle a_n=\frac{f^{(n)}(a) }{ n! }{(x-a)}^n\)}\\[-1em]
+\text{and \(R\) is the radius of convergence,}\\
+\begin{alignedat}{2} &
+  |x-a|<R
+    &\enspace\implies\ &
+  {\small\sum_{n=0}^\infty}\,a_n= f(x)
+  \\[1ex] &
+  |x-a|>R
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+  \\[2.25ex] &
+  |x-a|=R
+    &\enspace\implies\ &
+  \text{Inconclusive}
+\end{alignedat}\end{gathered}
+%%%%
+\\%%
+%%%%
+\begin{gathered}[t]\textbf{Alternating Series}\\
+\text{Where \(a_n=(-1)^{n-1}b_n,\quad b_n>0,\)}\\
+  b_{n+1}\le b_n
+    \quad\text{and}\quad
+  \lim_{n\to\infty}b_n=0
+\enspace\implies\ {\small\sum}\,a_n\enspace\mathbf{converges}
+\end{gathered}
+%%%%%%%%%%%%%%
+\end{gathered}
+\]
+\pagebreak
+\[
+\begin{gathered}
+%%%%%%%%%%%%%%%%
+\begin{gathered}[t]\textbf{Integral Test}\\
+\text{Where \(a_n=f(n)\) and $f$ is a \textbf{continuous,}}\\[-1em]
+\text{\textbf{positive, decreasing function} on \([k,\infty)\).}\\
+\begin{alignedat}{2}
+  \int_k^\infty f(x)\,dx
+  &\quad\text{converges}
+    &\enspace\implies\ &
+  {\small\sum_{n=k}^\infty}\,a_n\enspace\mathbf{converges}
+      \\
+  \int_k^\infty f(x)\,dx
+  &\quad\text{diverges}
+    &\enspace\implies\ &
+  {\small\sum_{n=k}^\infty}\,a_n\enspace\mathbf{diverges}
+\end{alignedat}\end{gathered}
+%%%%
+\\%%
+%%%%
+\begin{gathered}[t]\textbf{Ordinary Comparison Test}\\
+\text{
+Where \({\small\sum}\,a_n\) and \({\small\sum}\,b_n\) are both \textbf{positive series},}\\
+\begin{alignedat}{3}
+  a_n &\le b_n
+    &\quad\text{and}\quad&
+  {\small\sum}\,b_n\,\text{ converges }
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{ converges }
+\\
+  a_n  &
+  \ge b_n
+    &\quad\text{and}\quad &
+  {\small\sum}\,b_n\,\text{ diverges }
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{ diverges }
+\end{alignedat}\end{gathered}
+%%%%
+\\%%
+%%%%
+\begin{gathered}[t]\textbf{Limit Comparison Test}\\
+\text{
+Where \({\small\sum}\,a_n\) and \({\small\sum}\,b_n\) are both \textbf{positive series},
+}\\
+\text{if}\quad0 <\lim_{n\to\infty}\frac{a_n}{b_n}<\infty\quad\text{then}\\
+\begin{alignedat}{2}&
+  {\small\sum}\,a_n\enspace\mathbf{converges}
+    &\enspace\iff\ &
+  {\small\sum}\,b_n\enspace\mathbf{converges}
+\\&
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+    &\enspace\iff\ &
+  {\small\sum}\,b_n\enspace\mathbf{diverges}
+\end{alignedat}\end{gathered}
+%%%%%%%%%%%%%%
+\end{gathered}
+\]
+\pagebreak
+\[
+\begin{gathered}
+%%%%%%%%%%%%%%%%
+\begin{gathered}[t]\textbf{Ratio Test for Absolute Convergence}\\
+\begin{alignedat}{3}
+  \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|&=L<1
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{converges\ absolutely}
+\\
+  \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|&=L>1
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+\\
+  \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|&=\infty
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+\\
+  \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|&=1
+    &\enspace\implies\ &
+  \text{Ratio Test is inconclusive}
+\end{alignedat}\end{gathered}
+%%%%
+\\%%
+%%%%
+\begin{gathered}[t]\textbf{Root Test for Absolute Convergence}\\
+\begin{alignedat}{3}
+  \lim_{n\to\infty} \sqrt[\displaystyle n]{\left|a_n\right|}
+  &=L<1
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{converges\ absolutely}
+\\
+  \lim_{n\to\infty} \sqrt[\displaystyle n]{\left|a_n\right|}
+  &=L>1
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+\\
+  \lim_{n\to\infty} \sqrt[\displaystyle n]{\left|a_n\right|}
+  &=\infty
+    &\enspace\implies\ &
+  {\small\sum}\,a_n\enspace\mathbf{diverges}
+\\
+  \lim_{n\to\infty} \sqrt[\displaystyle n]{\left|a_n\right|}
+  &=1
+    &\enspace\implies\ &
+  \text{Root Test is inconclusive}
+\end{alignedat}\end{gathered}
+%%%%%%%%%%%%%%
+\end{gathered}
+\]
+
+
+\end{footnotesize}
+\end{center}
+\endgroup
