@@ -5,16 +5,13 @@
 
 % \def\aroundarrows{\mspace{18mu}}
 % \def\andsoarrow{\Rightarrow}
+let $v=2u$ and $dv = 2du$ so that $du = 1/2 dv$, then:
 \begin{align*}
-% \renewcommand{\baselinestretch}{2}
-{I}_{\no}
-=&  \int  \cos^2{u} \dif u \\
-=&  \int  \frac{1+\cos{2u}}{2} \dif u \\
-=&  \frac{1}{2}\cdot\int  1+\cos{2u}  \dif u \\
-=&  \frac{1}{2}\cdot \left(
-      {u}+\frac{1}{2}\sin{2u}
-    \right) + C \\
-=&  \tfrac{1}{2} {u}
-   +\tfrac{1}{4} \sin{2{u}} + C
+\int  \cos^2{u} \dif u \;=&\;  \frac{1}{2} \int  1+\cos(2u) \; du & \text{half-angle formula}\\
+=&\;  \frac{1}{4} \int  1 + \cos(v) \; dv & \text{let v = 2u}\\
+=&\;  \frac{1}{4} \left(v + \sin v \right) + C \\\
+=&\;  \frac{1}{4} \left(2u + \sin 2u \right) + C \\
+=&\;  \frac{1}{2} u + \frac{1}{4} \sin 2u + C \\
+=&\;  \frac{1}{2} \left(u + \frac{1}{2} \sin 2u \right) + C &\text{alternate} \\
 \\
 \end{align*}
